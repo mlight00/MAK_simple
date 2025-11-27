@@ -83,8 +83,8 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <img 
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
-                alt="Doctor examining data" 
+                src="/body.png" 
+                alt="Korean Medical Aesthetic Experts" 
                 className="relative rounded-lg shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-accent p-6 rounded shadow-xl hidden md:block">
