@@ -30,7 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={() => handleNav(Page.Home)}>
             <img 
-              src="/logo.png" 
+              src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png" 
               alt="MEDICAL AESTHETIC KOREA" 
               className="h-12 w-auto object-contain"
             />
