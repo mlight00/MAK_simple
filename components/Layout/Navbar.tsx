@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Page, NavItem } from '../../types';
 import { Menu, X } from 'lucide-react';
+// @ts-ignore
+import logo from '../../logo.png';
 
 interface NavbarProps {
   currentPage: Page;
@@ -30,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={() => handleNav(Page.Home)}>
             <img 
-              src="/logo.png" 
+              src={logo} 
               alt="MEDICAL AESTHETIC KOREA" 
               className="h-12 w-auto object-contain"
             />

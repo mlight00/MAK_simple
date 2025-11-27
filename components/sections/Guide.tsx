@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Check, ChevronRight, ChevronLeft, RotateCcw } from 'lucide-react';
+// @ts-ignore
+import logo from '../../logo.png';
 
 export const Guide: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -170,10 +172,8 @@ export const Guide: React.FC = () => {
               <div className="h-full w-full overflow-y-auto bg-white pt-8 pb-4 scrollbar-hide text-gray-800 font-sans">
                 
                 {/* Logo Header Common */}
-                <div className="text-center py-4 border-b border-gray-100">
-                    <span className="text-lg font-bold tracking-tight text-gray-900">
-                        MEDICAL<span className="text-red-600 font-light">AESTHETIC</span>
-                    </span>
+                <div className="text-center py-4 border-b border-gray-100 flex justify-center">
+                    <img src={logo} alt="Medical Aesthetic" className="h-5 w-auto object-contain" />
                 </div>
 
                 {/* DYNAMIC CONTENT BASED ON STEP */}
