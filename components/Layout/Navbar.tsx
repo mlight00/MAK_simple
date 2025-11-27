@@ -28,10 +28,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={() => handleNav(Page.Home)}>
-            <span className="text-2xl font-bold tracking-tight text-white font-sans">
-              MEDICAL<span className="text-accent font-light">AESTHETIC</span>
-            </span>
+          <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={() => handleNav(Page.Home)}>
+            <img 
+              src="/logo.png" 
+              alt="MEDICAL AESTHETIC KOREA" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Menu */}
