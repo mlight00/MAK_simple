@@ -23,6 +23,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleJoinClick = () => {
+    window.open('https://www.medicalaesthetickorea.com/member', '_blank');
+  };
+
   return (
     <nav className="fixed w-full z-50 bg-[#0A192F]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,7 +34,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={() => handleNav(Page.Home)}>
             <img 
-              src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png" 
+              src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png?raw=true" 
               alt="MEDICAL AESTHETIC KOREA" 
               className="h-12 w-auto object-contain"
             />
@@ -63,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
                 Access Guide
               </button>
               <button 
-                 onClick={() => handleNav(Page.Membership)}
+                 onClick={handleJoinClick}
                  className="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-sm text-sm font-bold shadow-lg shadow-red-900/20 transition-all"
               >
                 Join Now

@@ -171,7 +171,7 @@ export const Guide: React.FC = () => {
                 
                 {/* Logo Header Common */}
                 <div className="text-center py-4 border-b border-gray-100 flex justify-center">
-                    <img src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png" alt="Medical Aesthetic" className="h-5 w-auto object-contain" />
+                    <img src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png?raw=true" alt="Medical Aesthetic" className="h-5 w-auto object-contain" />
                 </div>
 
                 {/* DYNAMIC CONTENT BASED ON STEP */}
