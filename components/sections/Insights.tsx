@@ -17,7 +17,7 @@ export const Insights: React.FC = () => {
           <div className="relative">
              <div className="absolute inset-0 bg-accent rounded-sm transform translate-x-3 translate-y-3"></div>
              <img 
-               src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+               src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/insight.png?raw=true" 
                className="relative rounded-sm shadow-2xl object-cover h-[500px] w-full grayscale hover:grayscale-0 transition-all duration-500" 
                alt="Lab Research" 
              />
