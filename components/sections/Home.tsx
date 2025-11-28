@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Page } from '../../types';
 import { ArrowRight, Lock, TabletSmartphone, TrendingUp } from 'lucide-react';
@@ -14,7 +15,7 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
   return (
     <div className="animate-[fadeIn_0.5s_ease-in-out]">
       {/* Hero Section */}
-      <div className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -41,7 +42,7 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
             Exclusively curated insights from 3,500+ Korean medical aesthetic experts. <br className="hidden md:block" />
             Access the cutting-edge of K-Beauty procedures, filtered for the global elite.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pb-10 sm:pb-0">
             <button 
               onClick={handleApplyClick}
               className="w-full sm:w-auto px-10 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-sm shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-lg tracking-wide"

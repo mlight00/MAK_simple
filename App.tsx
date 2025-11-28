@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Page } from './types';
 import { Navbar } from './components/Layout/Navbar';
@@ -7,7 +8,6 @@ import { Insights } from './components/sections/Insights';
 import { Trends } from './components/sections/Trends';
 import { Membership } from './components/sections/Membership';
 import { Guide } from './components/sections/Guide';
-import { ChatWidget } from './components/ChatWidget';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
@@ -38,7 +38,6 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 };
