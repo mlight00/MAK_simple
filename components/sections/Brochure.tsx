@@ -26,9 +26,9 @@ export const Brochure: React.FC = () => {
       <div className="max-w-[210mm] mx-auto bg-[#0A192F] shadow-2xl print:shadow-none print:w-full print:max-w-none print:mx-0 min-h-[297mm] flex flex-col font-sans overflow-hidden">
         
         {/* 1. Header Area (Solid Navy Background) */}
-        {/* Reduced top padding further to 8mm */}
-        <div className="pt-[8mm] pb-[5mm] px-[15mm] text-center bg-[#0A192F] relative z-20">
-           <div className="mb-3 flex justify-center">
+        {/* INCREASED padding to 22mm to push content down as requested */}
+        <div className="pt-[22mm] pb-[5mm] px-[15mm] text-center bg-[#0A192F] relative z-20">
+           <div className="mb-4 flex justify-center">
               <span className="bg-[#D32F2F] text-white px-5 py-1.5 text-xs font-bold uppercase tracking-[0.2em] rounded-sm">Limited Access Now Open</span>
            </div>
            <h1 className="text-4xl font-serif font-bold text-white mb-3 leading-tight drop-shadow-xl">
@@ -40,7 +40,8 @@ export const Brochure: React.FC = () => {
         </div>
 
         {/* 2. Body Area (Image Background) */}
-        <div className="relative flex-grow flex flex-col justify-between">
+        {/* Removed flex-grow/justify-between to stop footer from floating away */}
+        <div className="relative flex flex-col h-full">
             {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0">
                <img 
@@ -49,14 +50,12 @@ export const Brochure: React.FC = () => {
                  className="w-full h-full object-cover opacity-30"
                />
                <div className="absolute inset-0 bg-[#0A192F]/90"></div>
-               <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-[#0A192F] to-transparent"></div>
+               <div className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-[#0A192F] to-transparent"></div>
             </div>
 
-            {/* Removed Spacer div to save space */}
-
-            {/* Content 1: The 3 Cards (Top 1%, Real-time, Synergy) */}
-            {/* Reduced top margin and bottom margin */}
-            <div className="relative z-10 px-[15mm] mt-4 mb-4">
+            {/* Content 1: The 3 Cards */}
+            {/* Reduced top margin slightly to compensate for header push */}
+            <div className="relative z-10 px-[15mm] mt-6 mb-6">
                <div className="grid grid-cols-3 gap-3">
                    {/* Card 1 */}
                    <div className="bg-[#112240] border border-white/10 p-3 rounded shadow-lg">
@@ -82,21 +81,18 @@ export const Brochure: React.FC = () => {
                </div>
             </div>
 
-            {/* Content 2: Precision over Volume (Vertical Stack with Red Bar) */}
-            {/* Reduced bottom margin */}
-            <div className="relative z-10 px-[15mm] mb-4">
+            {/* Content 2: Precision over Volume */}
+            {/* Compacted margins */}
+            <div className="relative z-10 px-[15mm] mb-6">
               <div className="flex bg-[#112240]/50 border border-white/5 rounded-lg overflow-hidden">
-                  {/* Red Bar Indicator */}
                   <div className="w-2 bg-[#D32F2F] flex-shrink-0"></div>
                   
-                  {/* Reduced inner padding p-5 -> p-4 */}
                   <div className="p-4 flex-grow">
-                      <h2 className="text-2xl font-serif font-bold text-white mb-3">
+                      <h2 className="text-xl font-serif font-bold text-white mb-3">
                         Precision over Volume
                       </h2>
                       
-                      {/* Vertical Stack Layout - Reduced gap from 4 to 2 */}
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-3">
                          <div>
                             <h3 className="text-white font-bold text-sm mb-1">The Vetting Process</h3>
                             <p className="text-gray-300 text-xs leading-relaxed">
@@ -114,19 +110,18 @@ export const Brochure: React.FC = () => {
               </div>
             </div>
 
-            {/* Content 3: How to Join (Bottom) */}
-            {/* Reduced bottom margin */}
-            <div className="relative z-10 px-[15mm] mb-2">
-               <div className="text-center mb-2">
-                   <div className="inline-block border-t border-white/20 w-16 mb-2"></div>
-                   <h2 className="text-xl font-serif font-bold text-white">
+            {/* Content 3: How to Join */}
+            {/* Compacted margins */}
+            <div className="relative z-10 px-[15mm] mb-4">
+               <div className="text-center mb-3">
+                   <div className="inline-block border-t border-white/20 w-12 mb-2"></div>
+                   <h2 className="text-lg font-serif font-bold text-white">
                       How to Join (Verification Required)
                    </h2>
                </div>
 
                <div className="grid grid-cols-4 gap-4 relative">
-                  {/* Connecting Line Behind */}
-                  <div className="absolute top-[18px] left-[12.5%] right-[12.5%] h-px bg-white/20 -z-0"></div>
+                  <div className="absolute top-[14px] left-[12.5%] right-[12.5%] h-px bg-white/20 -z-0"></div>
 
                   {[
                     { 
@@ -151,11 +146,11 @@ export const Brochure: React.FC = () => {
                     }
                   ].map((item) => (
                     <div key={item.step} className="text-center relative z-10 group">
-                       <div className="w-9 h-9 rounded-full bg-[#D32F2F] text-white text-sm font-bold flex items-center justify-center mx-auto mb-2 shadow-lg ring-4 ring-[#0A192F]">
+                       <div className="w-7 h-7 rounded-full bg-[#D32F2F] text-white text-xs font-bold flex items-center justify-center mx-auto mb-2 shadow-lg ring-4 ring-[#0A192F]">
                          {item.step}
                        </div>
-                       <h3 className="font-bold text-xs text-white mb-1">{item.title}</h3>
-                       <p className="text-[10px] text-gray-400 leading-snug px-1">
+                       <h3 className="font-bold text-[10px] text-white mb-1">{item.title}</h3>
+                       <p className="text-[8px] text-gray-400 leading-snug px-1">
                          {item.desc}
                        </p>
                     </div>
@@ -163,14 +158,14 @@ export const Brochure: React.FC = () => {
                </div>
             </div>
 
-            {/* Footer - Reduced padding */}
-            <div className="relative z-10 px-[15mm] py-[5mm] mt-auto border-t border-white/10 flex justify-between items-end bg-[#050d1a]/90 backdrop-blur">
+            {/* Footer - Fixed distance from content (mt-6), NOT sticking to bottom */}
+            <div className="relative z-10 px-[15mm] py-[6mm] mt-6 border-t border-white/10 flex justify-between items-end bg-[#050d1a]/90 backdrop-blur">
                <div>
                  <p className="text-gray-500 text-[10px] mb-1 uppercase tracking-widest">Official Registration</p>
                  <p className="text-[#D32F2F] font-bold text-sm font-serif">www.medicalaesthetickorea.com/member</p>
                </div>
                <div className="text-right">
-                  <img src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png?raw=true" alt="Logo" className="h-5 w-auto opacity-70 mb-2 ml-auto" />
+                  <img src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png?raw=true" alt="Logo" className="h-4 w-auto opacity-70 mb-2 ml-auto" />
                   <p className="text-[10px] text-gray-500">© Medical Aesthetic Korea Co. Ltd. All rights reserved.</p>
                </div>
             </div>
