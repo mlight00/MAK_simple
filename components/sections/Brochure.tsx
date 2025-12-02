@@ -26,11 +26,12 @@ export const Brochure: React.FC = () => {
       <div className="max-w-[210mm] mx-auto bg-[#0A192F] shadow-2xl print:shadow-none print:w-full print:max-w-none print:mx-0 min-h-[297mm] flex flex-col font-sans overflow-hidden">
         
         {/* 1. Header Area (Solid Navy Background) */}
-        <div className="pt-[18mm] pb-[8mm] px-[15mm] text-center bg-[#0A192F] relative z-20">
-           <div className="mb-6 flex justify-center">
-              <span className="bg-[#D32F2F] text-white px-5 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm">Limited Access Now Open</span>
+        {/* Reduced top padding slightly to save space */}
+        <div className="pt-[10mm] pb-[5mm] px-[15mm] text-center bg-[#0A192F] relative z-20">
+           <div className="mb-4 flex justify-center">
+              <span className="bg-[#D32F2F] text-white px-5 py-1.5 text-xs font-bold uppercase tracking-[0.2em] rounded-sm">Limited Access Now Open</span>
            </div>
-           <h1 className="text-4xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-xl">
+           <h1 className="text-4xl font-serif font-bold text-white mb-4 leading-tight drop-shadow-xl">
              Curated Intelligence from <br/> Korea's Aesthetic Leaders
            </h1>
            <p className="text-sm text-gray-200 font-light max-w-2xl mx-auto leading-relaxed opacity-90">
@@ -52,25 +53,26 @@ export const Brochure: React.FC = () => {
             </div>
 
             {/* Content 1: The 3 Cards (Top 1%, Real-time, Synergy) */}
-            <div className="relative z-10 px-[15mm] mt-6 mb-10">
-               <div className="grid grid-cols-3 gap-5">
+            {/* Tightened margins */}
+            <div className="relative z-10 px-[15mm] mt-2 mb-6">
+               <div className="grid grid-cols-3 gap-4">
                    {/* Card 1 */}
-                   <div className="bg-[#112240] border border-white/10 p-5 rounded shadow-lg">
-                      <h3 className="text-[#D32F2F] font-bold text-sm mb-3">Top 1% Curated</h3>
+                   <div className="bg-[#112240] border border-white/10 p-4 rounded shadow-lg">
+                      <h3 className="text-[#D32F2F] font-bold text-sm mb-2">Top 1% Curated</h3>
                       <p className="text-gray-300 text-[10px] leading-relaxed">
                         We filter out the noise. Receive only the most clinically significant case studies selected from 3,500+ members. Verified by experts.
                       </p>
                    </div>
                    {/* Card 2 */}
-                   <div className="bg-[#112240] border border-white/10 p-5 rounded shadow-lg">
-                      <h3 className="text-[#D32F2F] font-bold text-sm mb-3">Real-time Updates</h3>
+                   <div className="bg-[#112240] border border-white/10 p-4 rounded shadow-lg">
+                      <h3 className="text-[#D32F2F] font-bold text-sm mb-2">Real-time Updates</h3>
                       <p className="text-gray-300 text-[10px] leading-relaxed">
                         Stay ahead of the curve. Access the latest Korean injection techniques and device protocols the moment they trend in Seoul.
                       </p>
                    </div>
                    {/* Card 3 */}
-                   <div className="bg-[#112240] border border-white/10 p-5 rounded shadow-lg">
-                      <h3 className="text-[#D32F2F] font-bold text-sm mb-3">Device Synergy</h3>
+                   <div className="bg-[#112240] border border-white/10 p-4 rounded shadow-lg">
+                      <h3 className="text-[#D32F2F] font-bold text-sm mb-2">Device Synergy</h3>
                       <p className="text-gray-300 text-[10px] leading-relaxed">
                         Weekly reports on the most effective combination therapies currently performing well in Gangnam using global devices.
                       </p>
@@ -79,27 +81,28 @@ export const Brochure: React.FC = () => {
             </div>
 
             {/* Content 2: Precision over Volume (Vertical Stack with Red Bar) */}
-            <div className="relative z-10 px-[15mm] mb-12">
+            <div className="relative z-10 px-[15mm] mb-6">
               <div className="flex bg-[#112240]/50 border border-white/5 rounded-lg overflow-hidden">
                   {/* Red Bar Indicator */}
                   <div className="w-2 bg-[#D32F2F] flex-shrink-0"></div>
                   
-                  <div className="p-8 flex-grow">
-                      <h2 className="text-2xl font-serif font-bold text-white mb-6">
+                  {/* Reduced inner padding */}
+                  <div className="p-5 flex-grow">
+                      <h2 className="text-2xl font-serif font-bold text-white mb-4">
                         Precision over Volume
                       </h2>
                       
-                      {/* Vertical Stack Layout */}
-                      <div className="flex flex-col gap-6">
+                      {/* Vertical Stack Layout - Reduced gaps */}
+                      <div className="flex flex-col gap-4">
                          <div>
                             <h3 className="text-white font-bold text-sm mb-1">The Vetting Process</h3>
-                            <p className="text-gray-300 text-[11px] leading-relaxed">
+                            <p className="text-gray-300 text-xs leading-relaxed">
                               Every post is analyzed based on clinical evidence, innovation level, and practical applicability. Only the highest-quality content makes it to the English edition.
                             </p>
                          </div>
                          <div>
                             <h3 className="text-white font-bold text-sm mb-1">Beyond Textbooks</h3>
-                            <p className="text-gray-300 text-[11px] leading-relaxed">
+                            <p className="text-gray-300 text-xs leading-relaxed">
                               Access off-label applications and practical tips that are currently being discussed in closed Korean aesthetic expert communities.
                             </p>
                          </div>
@@ -109,9 +112,9 @@ export const Brochure: React.FC = () => {
             </div>
 
             {/* Content 3: How to Join (Bottom) */}
-            <div className="relative z-10 px-[15mm] mb-10">
-               <div className="text-center mb-8">
-                   <div className="inline-block border-t border-white/20 w-16 mb-4"></div>
+            <div className="relative z-10 px-[15mm] mb-4">
+               <div className="text-center mb-4">
+                   <div className="inline-block border-t border-white/20 w-16 mb-2"></div>
                    <h2 className="text-xl font-serif font-bold text-white">
                       How to Join (Verification Required)
                    </h2>
@@ -147,8 +150,8 @@ export const Brochure: React.FC = () => {
                        <div className="w-9 h-9 rounded-full bg-[#D32F2F] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3 shadow-lg ring-4 ring-[#0A192F]">
                          {item.step}
                        </div>
-                       <h3 className="font-bold text-[11px] text-white mb-1">{item.title}</h3>
-                       <p className="text-[9px] text-gray-400 leading-snug px-1">
+                       <h3 className="font-bold text-xs text-white mb-1">{item.title}</h3>
+                       <p className="text-[10px] text-gray-400 leading-snug px-1">
                          {item.desc}
                        </p>
                     </div>
@@ -156,8 +159,8 @@ export const Brochure: React.FC = () => {
                </div>
             </div>
 
-            {/* Footer */}
-            <div className="relative z-10 px-[15mm] py-[8mm] mt-auto border-t border-white/10 flex justify-between items-end bg-[#050d1a]/90 backdrop-blur">
+            {/* Footer - Reduced padding */}
+            <div className="relative z-10 px-[15mm] py-[5mm] mt-auto border-t border-white/10 flex justify-between items-end bg-[#050d1a]/90 backdrop-blur">
                <div>
                  <p className="text-gray-500 text-[10px] mb-1 uppercase tracking-widest">Official Registration</p>
                  <p className="text-[#D32F2F] font-bold text-sm font-serif">www.medicalaesthetickorea.com/member</p>
