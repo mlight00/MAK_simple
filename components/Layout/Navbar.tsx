@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Page, NavItem } from '../../types';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Printer } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: Page;
@@ -32,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-[#0A192F]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <nav className="fixed w-full z-50 bg-[#0A192F]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300 print:hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -46,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-center space-x-8">
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.page}
@@ -60,6 +61,20 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Brochure Button */}
+              <button
+                onClick={() => handleNav(Page.Brochure)}
+                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  currentPage === Page.Brochure
+                    ? 'text-accent font-bold'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                <Printer className="w-4 h-4" />
+                Brochure
+              </button>
+
               <button 
                 onClick={() => handleNav(Page.Guide)}
                 className={`px-4 py-2 rounded-sm text-sm font-medium transition-all border ${
@@ -106,6 +121,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
                 {item.label}
               </button>
             ))}
+            <button
+               onClick={() => handleNav(Page.Brochure)}
+               className="block w-full text-left text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center gap-2"
+            >
+               <Printer className="w-4 h-4" /> Brochure
+            </button>
             <button
               onClick={() => handleNav(Page.Guide)}
               className="block w-full text-left text-accent font-bold px-3 py-2 rounded-md text-base hover:bg-gray-700"

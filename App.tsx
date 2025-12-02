@@ -8,6 +8,7 @@ import { Insights } from './components/sections/Insights';
 import { Trends } from './components/sections/Trends';
 import { Membership } from './components/sections/Membership';
 import { Guide } from './components/sections/Guide';
+import { Brochure } from './components/sections/Brochure';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
@@ -24,6 +25,8 @@ const App: React.FC = () => {
         return <Membership setPage={setCurrentPage} />;
       case Page.Guide:
         return <Guide />;
+      case Page.Brochure:
+        return <Brochure />;
       default:
         return <Home setPage={setCurrentPage} />;
     }
@@ -33,11 +36,12 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-primary text-white font-sans selection:bg-accent selection:text-white">
       <Navbar currentPage={currentPage} setPage={setCurrentPage} />
       
-      <main className="flex-grow pt-20">
+      <main className={`flex-grow ${currentPage === Page.Brochure ? 'pt-20 bg-gray-100' : 'pt-20'}`}>
         {renderPage()}
       </main>
 
-      <Footer />
+      {/* Hide footer on Brochure page since it has its own internal footer */}
+      {currentPage !== Page.Brochure && <Footer />}
     </div>
   );
 };
