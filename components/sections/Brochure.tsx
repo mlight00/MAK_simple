@@ -26,12 +26,12 @@ export const Brochure: React.FC = () => {
       <div className="max-w-[210mm] mx-auto bg-[#0A192F] shadow-2xl print:shadow-none print:w-full print:max-w-none print:mx-0 min-h-[297mm] flex flex-col font-sans overflow-hidden">
         
         {/* 1. Header Area (Solid Navy Background) */}
-        {/* Reduced top padding slightly to save space */}
-        <div className="pt-[10mm] pb-[5mm] px-[15mm] text-center bg-[#0A192F] relative z-20">
-           <div className="mb-4 flex justify-center">
+        {/* Reduced top padding further to 8mm */}
+        <div className="pt-[8mm] pb-[5mm] px-[15mm] text-center bg-[#0A192F] relative z-20">
+           <div className="mb-3 flex justify-center">
               <span className="bg-[#D32F2F] text-white px-5 py-1.5 text-xs font-bold uppercase tracking-[0.2em] rounded-sm">Limited Access Now Open</span>
            </div>
-           <h1 className="text-4xl font-serif font-bold text-white mb-4 leading-tight drop-shadow-xl">
+           <h1 className="text-4xl font-serif font-bold text-white mb-3 leading-tight drop-shadow-xl">
              Curated Intelligence from <br/> Korea's Aesthetic Leaders
            </h1>
            <p className="text-sm text-gray-200 font-light max-w-2xl mx-auto leading-relaxed opacity-90">
@@ -49,29 +49,31 @@ export const Brochure: React.FC = () => {
                  className="w-full h-full object-cover opacity-30"
                />
                <div className="absolute inset-0 bg-[#0A192F]/90"></div>
-               <div className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-[#0A192F] to-transparent"></div>
+               <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-[#0A192F] to-transparent"></div>
             </div>
 
+            {/* Removed Spacer div to save space */}
+
             {/* Content 1: The 3 Cards (Top 1%, Real-time, Synergy) */}
-            {/* Tightened margins */}
-            <div className="relative z-10 px-[15mm] mt-2 mb-6">
-               <div className="grid grid-cols-3 gap-4">
+            {/* Reduced top margin and bottom margin */}
+            <div className="relative z-10 px-[15mm] mt-4 mb-4">
+               <div className="grid grid-cols-3 gap-3">
                    {/* Card 1 */}
-                   <div className="bg-[#112240] border border-white/10 p-4 rounded shadow-lg">
+                   <div className="bg-[#112240] border border-white/10 p-3 rounded shadow-lg">
                       <h3 className="text-[#D32F2F] font-bold text-sm mb-2">Top 1% Curated</h3>
                       <p className="text-gray-300 text-[10px] leading-relaxed">
                         We filter out the noise. Receive only the most clinically significant case studies selected from 3,500+ members. Verified by experts.
                       </p>
                    </div>
                    {/* Card 2 */}
-                   <div className="bg-[#112240] border border-white/10 p-4 rounded shadow-lg">
+                   <div className="bg-[#112240] border border-white/10 p-3 rounded shadow-lg">
                       <h3 className="text-[#D32F2F] font-bold text-sm mb-2">Real-time Updates</h3>
                       <p className="text-gray-300 text-[10px] leading-relaxed">
                         Stay ahead of the curve. Access the latest Korean injection techniques and device protocols the moment they trend in Seoul.
                       </p>
                    </div>
                    {/* Card 3 */}
-                   <div className="bg-[#112240] border border-white/10 p-4 rounded shadow-lg">
+                   <div className="bg-[#112240] border border-white/10 p-3 rounded shadow-lg">
                       <h3 className="text-[#D32F2F] font-bold text-sm mb-2">Device Synergy</h3>
                       <p className="text-gray-300 text-[10px] leading-relaxed">
                         Weekly reports on the most effective combination therapies currently performing well in Gangnam using global devices.
@@ -81,19 +83,20 @@ export const Brochure: React.FC = () => {
             </div>
 
             {/* Content 2: Precision over Volume (Vertical Stack with Red Bar) */}
-            <div className="relative z-10 px-[15mm] mb-6">
+            {/* Reduced bottom margin */}
+            <div className="relative z-10 px-[15mm] mb-4">
               <div className="flex bg-[#112240]/50 border border-white/5 rounded-lg overflow-hidden">
                   {/* Red Bar Indicator */}
                   <div className="w-2 bg-[#D32F2F] flex-shrink-0"></div>
                   
-                  {/* Reduced inner padding */}
-                  <div className="p-5 flex-grow">
-                      <h2 className="text-2xl font-serif font-bold text-white mb-4">
+                  {/* Reduced inner padding p-5 -> p-4 */}
+                  <div className="p-4 flex-grow">
+                      <h2 className="text-2xl font-serif font-bold text-white mb-3">
                         Precision over Volume
                       </h2>
                       
-                      {/* Vertical Stack Layout - Reduced gaps */}
-                      <div className="flex flex-col gap-4">
+                      {/* Vertical Stack Layout - Reduced gap from 4 to 2 */}
+                      <div className="flex flex-col gap-2">
                          <div>
                             <h3 className="text-white font-bold text-sm mb-1">The Vetting Process</h3>
                             <p className="text-gray-300 text-xs leading-relaxed">
@@ -112,8 +115,9 @@ export const Brochure: React.FC = () => {
             </div>
 
             {/* Content 3: How to Join (Bottom) */}
-            <div className="relative z-10 px-[15mm] mb-4">
-               <div className="text-center mb-4">
+            {/* Reduced bottom margin */}
+            <div className="relative z-10 px-[15mm] mb-2">
+               <div className="text-center mb-2">
                    <div className="inline-block border-t border-white/20 w-16 mb-2"></div>
                    <h2 className="text-xl font-serif font-bold text-white">
                       How to Join (Verification Required)
@@ -147,7 +151,7 @@ export const Brochure: React.FC = () => {
                     }
                   ].map((item) => (
                     <div key={item.step} className="text-center relative z-10 group">
-                       <div className="w-9 h-9 rounded-full bg-[#D32F2F] text-white text-sm font-bold flex items-center justify-center mx-auto mb-3 shadow-lg ring-4 ring-[#0A192F]">
+                       <div className="w-9 h-9 rounded-full bg-[#D32F2F] text-white text-sm font-bold flex items-center justify-center mx-auto mb-2 shadow-lg ring-4 ring-[#0A192F]">
                          {item.step}
                        </div>
                        <h3 className="font-bold text-xs text-white mb-1">{item.title}</h3>
