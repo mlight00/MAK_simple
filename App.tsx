@@ -36,7 +36,8 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-primary text-white font-sans selection:bg-accent selection:text-white">
       <Navbar currentPage={currentPage} setPage={setCurrentPage} />
       
-      <main className={`flex-grow ${currentPage === Page.Brochure ? 'pt-20 bg-gray-100' : 'pt-20'}`}>
+      {/* Added print:pt-0 to remove top padding when printing */}
+      <main className={`flex-grow ${currentPage === Page.Brochure ? 'pt-20 bg-gray-100 print:pt-0 print:bg-white' : 'pt-20'}`}>
         {renderPage()}
       </main>
 
