@@ -33,14 +33,14 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
             </span>
           </div>
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-2xl">
-            The Inner Circle of <br />
+            Curated Intelligence from <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-              Korean Medical Aesthetics
+              Korea's Aesthetic Leaders
             </span>
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-gray-300 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
             Exclusively curated insights from 3,500+ Korean medical aesthetic experts. <br className="hidden md:block" />
-            Access the cutting-edge of K-Beauty procedures, filtered for the global elite.
+            Access the cutting-edge of K-Beauty procedures, curated for discerning international physicians.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pb-10 sm:pb-0">
             <button 
