@@ -10,8 +10,6 @@ interface NavbarProps {
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Home', page: Page.Home },
-  { label: 'Insights', page: Page.Insights },
-  { label: 'K-Trends', page: Page.Trends },
   { label: 'Membership', page: Page.Membership },
 ];
 
@@ -38,9 +36,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer flex items-center" onClick={handleLogoClick}>
-            <img 
-              src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png?raw=true" 
-              alt="MEDICAL AESTHETIC KOREA" 
+            <img
+              src="https://raw.githubusercontent.com/mlight00/MAK_membership/main/logo.png?raw=true"
+              alt="MEDICAL AESTHETIC KOREA"
               className="h-3 md:h-5 w-auto object-contain"
             />
           </div>
@@ -52,42 +50,30 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
                 <button
                   key={item.page}
                   onClick={() => handleNav(item.page)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    currentPage === item.page
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${currentPage === item.page
                       ? 'text-accent font-bold'
                       : 'text-gray-300 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>
               ))}
-              
-              {/* Brochure Button */}
-              <button
-                onClick={() => handleNav(Page.Brochure)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  currentPage === Page.Brochure
-                    ? 'text-accent font-bold'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                <Printer className="w-4 h-4" />
-                Brochure
-              </button>
 
-              <button 
+              {/* Brochure Button */}
+
+
+              <button
                 onClick={() => handleNav(Page.Guide)}
-                className={`px-4 py-2 rounded-sm text-sm font-medium transition-all border ${
-                   currentPage === Page.Guide 
-                   ? 'bg-white text-primary border-white' 
-                   : 'bg-transparent border-white text-white hover:bg-white hover:text-primary'
-                }`}
+                className={`px-4 py-2 rounded-sm text-sm font-medium transition-all border ${currentPage === Page.Guide
+                    ? 'bg-white text-primary border-white'
+                    : 'bg-transparent border-white text-white hover:bg-white hover:text-primary'
+                  }`}
               >
                 Access Guide
               </button>
-              <button 
-                 onClick={handleJoinClick}
-                 className="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-sm text-sm font-bold shadow-lg shadow-red-900/20 transition-all"
+              <button
+                onClick={handleJoinClick}
+                className="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-sm text-sm font-bold shadow-lg shadow-red-900/20 transition-all"
               >
                 Join Now
               </button>
@@ -114,19 +100,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
               <button
                 key={item.page}
                 onClick={() => handleNav(item.page)}
-                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${
-                  currentPage === item.page ? 'text-white bg-gray-800' : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                }`}
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium ${currentPage === item.page ? 'text-white bg-gray-800' : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                  }`}
               >
                 {item.label}
               </button>
             ))}
-            <button
-               onClick={() => handleNav(Page.Brochure)}
-               className="block w-full text-left text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center gap-2"
-            >
-               <Printer className="w-4 h-4" /> Brochure
-            </button>
+
             <button
               onClick={() => handleNav(Page.Guide)}
               className="block w-full text-left text-accent font-bold px-3 py-2 rounded-md text-base hover:bg-gray-700"

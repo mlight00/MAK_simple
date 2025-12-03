@@ -1,11 +1,8 @@
 
 export enum Page {
   Home = 'home',
-  Insights = 'insights',
-  Trends = 'trends',
   Membership = 'membership',
-  Guide = 'guide',
-  Brochure = 'brochure'
+  Guide = 'guide'
 }
 
 export interface NavItem {
