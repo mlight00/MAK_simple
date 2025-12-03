@@ -39,7 +39,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setPage }) => {
             <img
               src="/logo_new.png"
               alt="MEDICAL AESTHETIC KOREA"
-              className="h-8 md:h-10 w-auto object-contain"
+              className="h-5 md:h-10 w-auto object-contain"
             />
           </div>
         </div>
