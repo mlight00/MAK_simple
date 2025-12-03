@@ -6,7 +6,6 @@ import { Footer } from './components/Layout/Footer';
 import { Home } from './components/sections/Home';
 import { Membership } from './components/sections/Membership';
 import { Guide } from './components/sections/Guide';
-import { ChatWidget } from './components/ChatWidget';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
@@ -34,8 +33,6 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-
-      <ChatWidget />
     </div>
   );
 };
