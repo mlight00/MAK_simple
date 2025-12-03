@@ -8,7 +8,34 @@ import { Membership } from './components/sections/Membership';
 import { Guide } from './components/sections/Guide';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
+  const [currentPage, setCurrentPage] = useState<Page>(() => {
+    const params = new URLSearchParams(window.location.search);
+    const pageParam = params.get('page');
+    if (pageParam === 'guide') return Page.Guide;
+    if (pageParam === 'membership') return Page.Membership;
+    return Page.Home;
+  });
+
+  React.useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    let shouldUpdate = false;
+
+    if (currentPage === Page.Guide && params.get('page') !== 'guide') {
+      params.set('page', 'guide');
+      shouldUpdate = true;
+    } else if (currentPage === Page.Membership && params.get('page') !== 'membership') {
+      params.set('page', 'membership');
+      shouldUpdate = true;
+    } else if (currentPage === Page.Home && params.has('page')) {
+      params.delete('page');
+      shouldUpdate = true;
+    }
+
+    if (shouldUpdate) {
+      const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
+      window.history.pushState({}, '', newUrl);
+    }
+  }, [currentPage]);
 
   const renderPage = () => {
     switch (currentPage) {
