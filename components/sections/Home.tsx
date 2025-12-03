@@ -27,8 +27,8 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
-          <div className="mb-8 animate-[fadeIn_1s_ease-out]">
-            <span className="inline-block py-1 px-4 rounded-full bg-accent/20 border border-accent/50 text-accent text-xs font-bold tracking-widest uppercase mb-4">
+          <div className="mb-10 animate-[fadeIn_1s_ease-out]">
+            <span className="inline-block py-3 px-8 rounded-sm bg-accent text-white text-sm font-bold tracking-[0.2em] uppercase shadow-lg transform hover:scale-105 transition-transform duration-300">
               Limited Access Now Open
             </span>
           </div>
@@ -39,7 +39,7 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
             </span>
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-gray-300 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
-            Exclusively curated insights from 3,500+ Korean medical aesthetic experts. <br className="hidden md:block" />
+            Exclusively curated insights from 4,000+ Korean medical aesthetic experts. <br className="hidden md:block" />
             Access the cutting-edge of K-Beauty procedures, curated for discerning international physicians.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pb-10 sm:pb-0">
@@ -76,7 +76,7 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
               <div className="border-l-4 border-accent pl-8 py-2">
                 <h3 className="text-xl font-bold text-white mb-3">Our Solution</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  We don't just aggregate data. We curate. From Korea's largest closed community of 3,500 medical aesthetic experts, 
+                  We don't just aggregate data. We curate. From Korea's largest closed community of 4,000 medical aesthetic experts, 
                   we deliver only the verified, high-impact protocols directly to your device.
                 </p>
               </div>
@@ -89,7 +89,7 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
                 className="relative rounded-lg shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-accent p-6 rounded shadow-xl hidden md:block">
-                <p className="text-white font-bold text-3xl font-serif">3,500+</p>
+                <p className="text-white font-bold text-3xl font-serif">4,000+</p>
                 <p className="text-white/80 text-sm tracking-wide">Verified Experts</p>
               </div>
             </div>
@@ -108,7 +108,7 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
             <FeatureCard 
               icon={<Lock className="w-8 h-8 text-accent" />}
               title="Top 1% Curated Intelligence"
-              description="We filter out the noise. Receive only the most clinically significant case studies selected from 3,500+ members."
+              description="We filter out the noise. Receive only the most clinically significant case studies selected from 4,000+ members."
             />
             <FeatureCard 
               icon={<TrendingUp className="w-8 h-8 text-accent" />}

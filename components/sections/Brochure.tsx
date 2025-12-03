@@ -35,11 +35,11 @@ export const Brochure: React.FC = () => {
              Curated Intelligence from <br/> Korea's Aesthetic Leaders
            </h1>
            <p className="text-sm text-gray-200 font-light max-w-2xl mx-auto leading-relaxed opacity-90">
-             Exclusively curated insights from 3,500+ Korean medical aesthetic experts. Access the cutting-edge of K-Beauty procedures, curated for discerning international physicians.
+             Exclusively curated insights from 4,000+ Korean medical aesthetic experts. Access the cutting-edge of K-Beauty procedures, curated for discerning international physicians.
            </p>
         </div>
 
-        {/* 2. Body Area (Solid Background) */}
+        {/* 2. Body Area (Solid Background - Image Removed) */}
         {/* flex-grow with justify-between to push footer to bottom and spread content */}
         <div className="relative flex-grow flex flex-col justify-between">
             
@@ -53,7 +53,7 @@ export const Brochure: React.FC = () => {
                        <div className="bg-[#112240] border border-white/10 p-4 rounded shadow-lg">
                           <h3 className="text-[#D32F2F] font-bold text-sm mb-2">Top 1% Curated</h3>
                           <p className="text-gray-300 text-[10px] leading-relaxed">
-                            We filter out the noise. Receive only the most clinically significant case studies selected from 3,500+ members. Verified by experts.
+                            We filter out the noise. Receive only the most clinically significant case studies selected from 4,000+ members. Verified by experts.
                           </p>
                        </div>
                        {/* Card 2 */}
