@@ -29,7 +29,7 @@ export const Home: React.FC<HomeProps> = ({ setPage }) => {
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
           <div className="mb-8 animate-[fadeIn_1s_ease-out]">
             <span className="inline-block py-1 px-4 rounded-full bg-accent/20 border border-accent/50 text-accent text-xs font-bold tracking-widest uppercase mb-4">
-              Invitation Only
+              Limited Access Now Open
             </span>
           </div>
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight drop-shadow-2xl">
